@@ -1,0 +1,36 @@
+version = 1
+revision = 3
+requires-python = "==3.10.18"
+resolution-markers = [
+    "sys_platform != 'emscripten'",
+    "sys_platform == 'emscripten'",
+]
+
+[[package]]
+name = "bluetooth"
+version = "0.1.0"
+source = { virtual = "." }
+dependencies = [
+    { name = "pybluez" },
+    { name = "setuptools" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "pybluez", git = "https://github.com/pybluez/pybluez.git" },
+    { name = "setuptools", specifier = "==57.5.0" },
+]
+
+[[package]]
+name = "pybluez"
+version = "0.30"
+source = { git = "https://github.com/pybluez/pybluez.git#82cbba8a1ebd4c1e3442dfafd8581d58c50fa39e" }
+
+[[package]]
+name = "setuptools"
+version = "57.5.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/20/f7/205a71cc9cc68f23afd9f3083002d0fb0a8c2277baf41a528395552e13c0/setuptools-57.5.0.tar.gz", hash = "sha256:d9d3266d50f59c6967b9312844470babbdb26304fe740833a5f8d89829ba3a24", size = 2141727, upload-time = "2021-09-04T15:12:23.852Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/4b/b9/71687c5d2034c863db1db2e0704f5e27581ff3cb44d7f293968c5e08ceb3/setuptools-57.5.0-py3-none-any.whl", hash = "sha256:60d78588f15b048f86e35cdab73003d8b21dd45108ee61a6693881a427f22073", size = 819294, upload-time = "2021-09-04T15:12:22.026Z" },
+]
